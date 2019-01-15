@@ -6,7 +6,7 @@ jQuery(function ($) {
                 headers: {
                     token: localStorage.getItem("user_session")
                 },
-                url: "http://localhost:3000/users/list",
+                url: "http://132.232.131.67:3000/users/list",
                 success(data) {
                     resolve(data);
                 }
@@ -19,7 +19,7 @@ jQuery(function ($) {
         if(data.status){
             rend(data.data)
         }else{
-            location.href="http://localhost:3000/login.html";
+            location.href="http://132.232.131.67:3000/login.html";
         }
     })();
 
@@ -30,7 +30,7 @@ jQuery(function ($) {
             let id = $(this).parent().siblings(".listId").html();
             $.ajax({
                 type: "POST",
-                url: "http://localhost:3000/users/list",
+                url: "http://132.232.131.67:3000/users/list",
                 data: {
                     _id: id,
                     dele: true
@@ -50,7 +50,7 @@ jQuery(function ($) {
     // 点击修改按钮，传id到修改页面、
     $("#list").on("click", ".alter", function () {
         let id = $(this).parent().siblings(".listId").html();
-        location.href = `http://localhost:3000/alter.html?id=${id}`;
+        location.href = `http://132.232.131.67:3000/alter.html?id=${id}`;
     });
 
     //搜索
@@ -61,7 +61,7 @@ jQuery(function ($) {
                 return new Promise((resolve, reject) => {
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:3000/users/list",
+                        url: "http://132.232.131.67:3000/users/list",
                         data:{
                             inputSearch:$("#inputSearch").val(),
                             Search:true

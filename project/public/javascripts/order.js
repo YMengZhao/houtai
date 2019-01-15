@@ -48,7 +48,7 @@ jQuery(function ($) {
             if (window.confirm('确定要添加数据吗？')) {
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost:3000/users/order",
+                    url: "http://132.232.131.67:3000/users/order",
                     data: {
                         name: $("#name").val(),
                         age: $("#age").val(),

@@ -7,16 +7,16 @@ jQuery(function ($) {
             alert('登录成功');
             console.log(data.crypto);
             localStorage.setItem("user_session", data.crypto);
-            location.href="http://localhost:3000/list.html";
+            location.href="http://132.232.131.67:3000/list.html";
         } else {
-            alert('账号或密码错误');
+            alert('账号或密码错误');  
         }
     });
     let login = (inputEmail, inputPassword) => {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: "POST",
-                url: "http://localhost:3000/users/login",
+                url: "http://132.232.131.67:3000/users/login",
                 data: {
                     inputEmail,
                     inputPassword

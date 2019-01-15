@@ -12,7 +12,7 @@ jQuery(function ($) {
         return new Promise((resolve, reject) => {
             $.ajax({
                 type: "POST",
-                url: "http://localhost:3000/users/alter",
+                url: "http://132.232.131.67:3000/users/alter",
                 data:{
                     _id,
                 },
@@ -80,7 +80,7 @@ jQuery(function ($) {
             if (window.confirm('确定要修改数据吗？')) {
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost:3000/users/alter",
+                    url: "http://132.232.131.67:3000/users/alter",
                     data: {
                         _id,
                         name: $("#name").val(),

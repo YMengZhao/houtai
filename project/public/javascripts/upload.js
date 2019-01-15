@@ -3,14 +3,14 @@ jQuery(function($){
         var data = new FormData();
         data.append("logo", $("#file")[0].files[0]);
         $.ajax({
-            url: 'http://localhost:3000/users/upload',
+            url: 'http://132.232.131.67:3000/users/upload',
             type: 'POST',
             cache: false, //不必须
             data: data,
             processData: false,
             contentType: false,
             success: function(data) {
-                $("#img").prop("src",`http://localhost:3000/${data.file.filename}`);
+                $("#img").prop("src",`http://132.232.131.67:3000/${data.file.filename}`);
             }
         })
     })
